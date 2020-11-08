@@ -1,10 +1,11 @@
 import Header from "./Header";
 import Search from "./SearchBar";
 import React from "react";
+import "./track.css";
 
 function Track() {
   return (
-    <div>
+    <div className = "track">
       <Header />
       <Search />
     </div>

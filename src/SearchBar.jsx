@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import "./header.css";
+import "./search.css";
 
 function Search(){
     let [parcelID, setParcelID] = useState("");
@@ -21,31 +21,27 @@ function Search(){
     const handleSearch = () =>{
         const parcel = data.filter(item => item.id === parcelID);
         setFound(parcel);
-        PresentParcel(found);
         setSearch(true);
+        PresentParcel();
     }
 
     const PresentParcel =()=> {
         if(searched){
             data.map(item => console.log(item.id));
-            console.log(found);
             if(found.length === 0){
+                console.log("here")
                 return (
-                <div>
-                    The Package {parcelID} is NOT found, please check the parcel ID and try again.
+                <div className="resultNot">
+                    The Package is NOT found, please check the parcel ID and try again.
                 </div>);
             }else
             {   
                 return (
-                    <div>
-                        <label>ID: </label>
-                        <p>{found[0].id}</p>
-                        <label>ETA: </label>
-                        <p>{found[0].eta}</p>
-                        <label>Location: </label>
-                        <p>{found[0].location_name}</p>
-                        <label>status: </label>
-                        <p>{found[0].status}</p>
+                    <div className="result">
+                        <label>ID: {found[0].id}</label>
+                        <label>ETA: {found[0].eta}</label>
+                        <label>Location: {found[0].location_name}</label>
+                        <label>status: {found[0].status}</label>
                     </div>
                 )
             }
@@ -56,8 +52,8 @@ function Search(){
     }
 
     return (
-        <div className="header">
-            <legend>Enter the Parcel ID(4 digits number):</legend>
+        <div className="search">
+            <label>Enter the Parcel ID(4 digits number):</label>
             <input placeholder="Enter parcel ID" value = {parcelID} onChange = {getInput}/>
             <button onClick = {handleSearch}>Search</button>
             <PresentParcel />

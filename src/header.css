@@ -1,4 +1,19 @@
 .header{
-    text-align: center;
-    font-size: 36px;
+    display: grid;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+    padding-bottom: 60px;
+}
+.header img{
+    text-align: right;
+    justify-self: center;
+    width: 100px;
+}
+.header h2{
+    margin:0px;
+    padding:0px;
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
 }

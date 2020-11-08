@@ -1,9 +1,16 @@
-body {
-  margin: 0px;
-  border: 0px
+body, html {
+    height: 100%;
+    margin: 0px;
+    padding:0px;
+    background-image: url("https://media-exp1.licdn.com/dms/image/C561BAQG9xLshdnQetw/company-background_10000/0?e=1604916000&v=beta&t=WNFfBdIxxWgLL9qBwOd2y7SfFA0PCAPWYK38T1qiye8");
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
 }
